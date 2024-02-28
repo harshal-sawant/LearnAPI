@@ -226,3 +226,70 @@ WHERE [t].[Code] = @__p_0
 2024-02-25 22:50:59.449 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.GetByCode (LearnAPI) in 11.2702ms
 2024-02-25 22:50:59.450 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.GetByCode (LearnAPI)'
 2024-02-25 22:50:59.451 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Customer/GetByCode?code=1 - - - 200 - application/json;+charset=utf-8 13.4172ms
+2024-02-28 19:53:59.630 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-28 19:53:59.730 +05:30 [INF] Creating key {19d5a21e-48f4-42ef-b0d7-562fc73f64a2} with creation date 2024-02-28 14:23:59Z, activation date 2024-02-28 14:23:59Z, and expiration date 2024-05-28 14:23:59Z.
+2024-02-28 19:53:59.753 +05:30 [INF] Writing data to file 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys\key-19d5a21e-48f4-42ef-b0d7-562fc73f64a2.xml'.
+2024-02-28 19:54:00.438 +05:30 [INF] Now listening on: https://localhost:7169
+2024-02-28 19:54:00.442 +05:30 [INF] Now listening on: http://localhost:5251
+2024-02-28 19:54:00.452 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-28 19:54:00.456 +05:30 [INF] Hosting environment: Development
+2024-02-28 19:54:00.457 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-02-28 19:54:02.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-28 19:54:04.170 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 1633.2045ms
+2024-02-28 19:54:04.842 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-28 19:54:04.842 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-28 19:54:04.863 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 20.5530ms
+2024-02-28 19:54:05.155 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 312.8143ms
+2024-02-28 19:54:05.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-28 19:54:05.903 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 656.6024ms
+2024-02-28 19:54:24.624 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Customer/GetAll - -
+2024-02-28 19:54:24.894 +05:30 [INF] BasicAuthentication was not authenticated. Failure message: No header found
+2024-02-28 19:54:24.901 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-28 19:54:24.910 +05:30 [INF] AuthenticationScheme: BasicAuthentication was challenged.
+2024-02-28 19:54:24.917 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Customer/GetAll - - - 401 0 - 292.7204ms
+2024-02-28 19:55:36.896 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/Customer/GetAll - -
+2024-02-28 19:55:36.913 +05:30 [INF] BasicAuthentication was not authenticated. Failure message: No header found
+2024-02-28 19:55:36.914 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-28 19:55:36.919 +05:30 [INF] AuthenticationScheme: BasicAuthentication was challenged.
+2024-02-28 19:55:36.939 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/Customer/GetAll - - - 401 0 - 42.8793ms
+2024-02-28 19:58:18.328 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/Customer/GetAll - -
+2024-02-28 19:58:19.900 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString), @__password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__username_0 AND [t].[password] = @__password_1
+2024-02-28 19:58:20.001 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.GetAll (LearnAPI)'
+2024-02-28 19:58:20.034 +05:30 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-02-28 19:58:20.080 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Code], [t].[Creditlimit], [t].[Email], [t].[IsActive], [t].[Name], [t].[Phone], [t].[Taxcode]
+FROM [tbl_customer] AS [t]
+2024-02-28 19:58:20.139 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LearnAPI.Modal.CustomerModal, LearnAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-28 19:58:20.174 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.GetAll (LearnAPI) in 133.9302ms
+2024-02-28 19:58:20.176 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.GetAll (LearnAPI)'
+2024-02-28 19:58:20.182 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/Customer/GetAll - - - 200 - application/json;+charset=utf-8 1853.8967ms
+2024-02-28 19:58:52.095 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-28 19:58:52.311 +05:30 [INF] Now listening on: https://localhost:7169
+2024-02-28 19:58:52.311 +05:30 [INF] Now listening on: http://localhost:5251
+2024-02-28 19:58:52.314 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-28 19:58:52.315 +05:30 [INF] Hosting environment: Development
+2024-02-28 19:58:52.315 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-02-28 19:58:53.082 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-28 19:58:53.487 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 407.3628ms
+2024-02-28 19:58:54.062 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-28 19:58:54.067 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-28 19:58:54.068 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 5.5564ms
+2024-02-28 19:58:54.116 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.4602ms
+2024-02-28 19:58:54.177 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-28 19:58:54.490 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 311.9553ms
+2024-02-28 19:58:58.741 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Customer/GetAll - -
+2024-02-28 19:58:58.839 +05:30 [INF] BasicAuthentication was not authenticated. Failure message: No header found
+2024-02-28 19:58:58.842 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.GetAll (LearnAPI)'
+2024-02-28 19:58:58.858 +05:30 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-02-28 19:58:59.592 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Code], [t].[Creditlimit], [t].[Email], [t].[IsActive], [t].[Name], [t].[Phone], [t].[Taxcode]
+FROM [tbl_customer] AS [t]
+2024-02-28 19:58:59.696 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LearnAPI.Modal.CustomerModal, LearnAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-28 19:58:59.715 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.GetAll (LearnAPI) in 853.9521ms
+2024-02-28 19:58:59.716 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.GetAll (LearnAPI)'
+2024-02-28 19:58:59.722 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Customer/GetAll - - - 200 - application/json;+charset=utf-8 981.8215ms
