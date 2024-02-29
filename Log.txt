@@ -293,3 +293,152 @@ FROM [tbl_customer] AS [t]
 2024-02-28 19:58:59.715 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.GetAll (LearnAPI) in 853.9521ms
 2024-02-28 19:58:59.716 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.GetAll (LearnAPI)'
 2024-02-28 19:58:59.722 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Customer/GetAll - - - 200 - application/json;+charset=utf-8 981.8215ms
+2024-02-29 19:53:56.988 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-29 19:53:57.324 +05:30 [INF] Now listening on: https://localhost:7169
+2024-02-29 19:53:57.327 +05:30 [INF] Now listening on: http://localhost:5251
+2024-02-29 19:53:57.331 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-29 19:53:57.333 +05:30 [INF] Hosting environment: Development
+2024-02-29 19:53:57.335 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-02-29 19:53:58.587 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-29 19:53:59.972 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 1378.5885ms
+2024-02-29 19:54:00.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-29 19:54:00.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-29 19:54:00.244 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 30.4245ms
+2024-02-29 19:54:00.476 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 263.1824ms
+2024-02-29 19:54:00.523 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-29 19:54:00.737 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 213.7912ms
+2024-02-29 19:54:39.502 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47
+2024-02-29 19:54:39.515 +05:30 [INF] CORS policy execution successful.
+2024-02-29 19:54:39.750 +05:30 [INF] BasicAuthentication was not authenticated. Failure message: No header found
+2024-02-29 19:54:39.755 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-02-29 19:54:39.793 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-02-29 19:54:41.174 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[@__userCred_Username_0='?' (Size = 50) (DbType = AnsiString), @__userCred_Password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_Username_0 AND [t].[password] = @__userCred_Password_1
+2024-02-29 19:54:41.426 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-02-29 19:54:41.432 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 1635.2037ms
+2024-02-29 19:54:41.433 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-02-29 19:54:41.442 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - text/plain;+charset=utf-8 1941.0232ms
+2024-02-29 20:10:46.754 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-29 20:10:47.029 +05:30 [INF] Now listening on: https://localhost:7169
+2024-02-29 20:10:47.031 +05:30 [INF] Now listening on: http://localhost:5251
+2024-02-29 20:10:47.035 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-29 20:10:47.037 +05:30 [INF] Hosting environment: Development
+2024-02-29 20:10:47.040 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-02-29 20:10:48.277 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-29 20:10:49.028 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-29 20:10:49.461 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-29 20:10:49.468 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 399.0017ms
+2024-02-29 20:10:49.468 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 1201.0334ms
+2024-02-29 20:10:49.560 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 98.3427ms
+2024-02-29 20:10:49.627 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-29 20:10:49.915 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 288.5292ms
+2024-02-29 20:11:16.732 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/Customer/GetAll - -
+2024-02-29 20:11:17.629 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.GetAll (LearnAPI)'
+2024-02-29 20:11:17.666 +05:30 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-02-29 20:11:19.127 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Code], [t].[Creditlimit], [t].[Email], [t].[IsActive], [t].[Name], [t].[Phone], [t].[Taxcode]
+FROM [tbl_customer] AS [t]
+2024-02-29 20:11:19.275 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LearnAPI.Modal.CustomerModal, LearnAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-29 20:11:19.315 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.GetAll (LearnAPI) in 1645.1607ms
+2024-02-29 20:11:19.316 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.GetAll (LearnAPI)'
+2024-02-29 20:11:19.329 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/Customer/GetAll - - - 200 - application/json;+charset=utf-8 2596.8608ms
+2024-02-29 20:11:59.124 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Customer/GetByCode?code=002 - -
+2024-02-29 20:11:59.142 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-29 20:11:59.148 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-29 20:11:59.148 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Customer/GetByCode?code=002 - - - 401 0 - 23.9141ms
+2024-02-29 20:12:19.672 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/Customer/GetByCode?code=002 - -
+2024-02-29 20:12:19.678 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-29 20:12:19.679 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-29 20:12:19.679 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/Customer/GetByCode?code=002 - - - 401 0 - 7.6511ms
+2024-02-29 20:13:06.779 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47
+2024-02-29 20:13:06.783 +05:30 [INF] CORS policy execution successful.
+2024-02-29 20:13:06.785 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-02-29 20:13:06.798 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-02-29 20:13:07.006 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__userCred_Username_0='?' (Size = 50) (DbType = AnsiString), @__userCred_Password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_Username_0 AND [t].[password] = @__userCred_Password_1
+2024-02-29 20:13:07.194 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-02-29 20:13:07.195 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 397.498ms
+2024-02-29 20:13:07.195 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-02-29 20:13:07.196 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - text/plain;+charset=utf-8 416.5376ms
+2024-02-29 20:13:21.209 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/Customer/GetByCode?code=002 - -
+2024-02-29 20:13:21.277 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.GetByCode (LearnAPI)'
+2024-02-29 20:13:21.284 +05:30 [INF] Route matched with {action = "GetByCode", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByCode(System.String) on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-02-29 20:13:21.407 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Code], [t].[Creditlimit], [t].[Email], [t].[IsActive], [t].[Name], [t].[Phone], [t].[Taxcode]
+FROM [tbl_customer] AS [t]
+WHERE [t].[Code] = @__p_0
+2024-02-29 20:13:21.410 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.CustomerModal'.
+2024-02-29 20:13:21.410 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.GetByCode (LearnAPI) in 125.574ms
+2024-02-29 20:13:21.410 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.GetByCode (LearnAPI)'
+2024-02-29 20:13:21.410 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/Customer/GetByCode?code=002 - - - 200 - application/json;+charset=utf-8 201.5250ms
+2024-02-29 20:14:22.318 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-29 20:14:22.604 +05:30 [INF] Now listening on: https://localhost:7169
+2024-02-29 20:14:22.606 +05:30 [INF] Now listening on: http://localhost:5251
+2024-02-29 20:14:22.613 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-29 20:14:22.616 +05:30 [INF] Hosting environment: Development
+2024-02-29 20:14:22.618 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-02-29 20:14:23.651 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-29 20:14:24.206 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 557.4212ms
+2024-02-29 20:14:24.259 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-29 20:14:24.259 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-29 20:14:24.656 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 397.0969ms
+2024-02-29 20:14:24.803 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 543.7976ms
+2024-02-29 20:14:24.873 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-29 20:14:25.378 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 505.3816ms
+2024-02-29 20:14:26.086 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/Customer/GetByCode?code=002 - -
+2024-02-29 20:14:26.334 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '2/29/2024 2:43:37 PM', Current time (UTC): '2/29/2024 2:44:26 PM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-02-29 20:14:26.376 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '2/29/2024 2:43:37 PM', Current time (UTC): '2/29/2024 2:44:26 PM'.
+2024-02-29 20:14:26.387 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-29 20:14:26.393 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-02-29 20:14:26.405 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/Customer/GetByCode?code=002 - - - 401 0 - 318.2725ms
+2024-02-29 20:52:31.517 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-29 20:52:31.861 +05:30 [INF] Now listening on: https://localhost:7169
+2024-02-29 20:52:31.863 +05:30 [INF] Now listening on: http://localhost:5251
+2024-02-29 20:52:31.868 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-29 20:52:31.870 +05:30 [INF] Hosting environment: Development
+2024-02-29 20:52:31.872 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-02-29 20:52:33.031 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-29 20:52:33.445 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 413.9197ms
+2024-02-29 20:52:33.503 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-29 20:52:33.503 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-29 20:52:33.511 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 7.0960ms
+2024-02-29 20:52:33.573 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 70.3817ms
+2024-02-29 20:52:33.635 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-29 20:52:33.990 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 355.6452ms
+2024-02-29 20:52:53.180 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47
+2024-02-29 20:52:53.189 +05:30 [INF] CORS policy execution successful.
+2024-02-29 20:52:53.308 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-02-29 20:52:53.361 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-02-29 20:52:55.295 +05:30 [INF] Executed DbCommand (302ms) [Parameters=[@__userCred_Username_0='?' (Size = 50) (DbType = AnsiString), @__userCred_Password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_Username_0 AND [t].[password] = @__userCred_Password_1
+2024-02-29 20:52:55.629 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-02-29 20:52:55.846 +05:30 [INF] Executed DbCommand (81ms) [Parameters=[@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 8000) (DbType = AnsiString), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [tbl_refreshtoken] ([userid], [refreshtoken], [tokenid])
+VALUES (@p0, @p1, @p2);
+2024-02-29 20:52:55.867 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-02-29 20:52:55.878 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 2513.2827ms
+2024-02-29 20:52:55.879 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-02-29 20:52:55.890 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 2710.2231ms

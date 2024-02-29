@@ -1,12 +1,17 @@
 using AutoMapper;
 using LearnAPI.Container;
 using LearnAPI.Helper;
+using LearnAPI.Modal;
 using LearnAPI.Repos;
+using LearnAPI.Repos.Models;
 using LearnAPI.Service;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,9 +22,28 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ICustomerService, CustomerService>();
+builder.Services.AddTransient<IRefreshHandler,RefreshHandler>();
 builder.Services.AddDbContext<LearndataContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("apicon")));
-builder.Services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 
+//builder.Services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+var _authkey = builder.Configuration.GetValue<string>("JwtSettings:securitykey");
+builder.Services.AddAuthentication(item =>
+{
+    item.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    item.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(item =>
+{
+    item.RequireHttpsMetadata = true;
+    item.SaveToken = true;
+    item.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authkey)),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ClockSkew = TimeSpan.Zero
+    };
+});
 
 var automapper = new MapperConfiguration(item => item.AddProfile(new AutoMapperHandler()));
 IMapper mapper = automapper.CreateMapper();
@@ -49,6 +73,8 @@ var _logger = new LoggerConfiguration()
 
 builder.Logging.AddSerilog(_logger);
 
+var _jwtsetting = builder.Configuration.GetSection("JwtSettings");
+builder.Services.Configure<JwtSettings>(_jwtsetting);
 
 
 var app = builder.Build();
