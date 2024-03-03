@@ -807,3 +807,172 @@ WHERE [userid] = @p1;
 2024-03-03 17:25:01.013 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 37.2392ms
 2024-03-03 17:25:01.014 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
 2024-03-03 17:25:01.014 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 419 - 200 - application/json;+charset=utf-8 40.2914ms
+2024-03-03 17:39:11.876 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 17:39:12.222 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 17:39:12.227 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 17:39:12.234 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 17:39:12.236 +05:30 [INF] Hosting environment: Development
+2024-03-03 17:39:12.238 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 17:39:13.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 17:39:13.409 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 332.9289ms
+2024-03-03 17:39:13.433 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 17:39:13.433 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 17:39:13.463 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 30.3572ms
+2024-03-03 17:39:13.552 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 119.4416ms
+2024-03-03 17:39:13.619 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 17:39:13.922 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - LearnAPI.Controllers.ProductController.UploadImage (LearnAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-03-03 17:39:13.929 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 310.3510ms
+2024-03-03 17:40:05.282 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 17:40:05.473 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 17:40:05.475 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 17:40:05.480 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 17:40:05.482 +05:30 [INF] Hosting environment: Development
+2024-03-03 17:40:05.483 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 17:40:06.295 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 17:40:06.561 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 265.8733ms
+2024-03-03 17:40:06.583 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 17:40:06.583 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 17:40:06.592 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 7.8701ms
+2024-03-03 17:40:06.685 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 102.4521ms
+2024-03-03 17:40:06.737 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 17:40:06.983 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - LearnAPI.Controllers.ProductController.UploadImage (LearnAPI). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-03-03 17:40:06.986 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 249.4581ms
+2024-03-03 17:41:16.084 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 17:41:16.304 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 17:41:16.306 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 17:41:16.310 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 17:41:16.312 +05:30 [INF] Hosting environment: Development
+2024-03-03 17:41:16.314 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 17:41:17.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 17:41:17.511 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 299.3739ms
+2024-03-03 17:41:17.545 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 17:41:17.549 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 17:41:17.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 48.0258ms
+2024-03-03 17:41:17.679 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 129.8834ms
+2024-03-03 17:41:17.731 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 17:41:17.943 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.6337ms
+2024-03-03 17:42:10.108 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7169/api/Product/UploadImage?productcode=001 multipart/form-data;+boundary=----WebKitFormBoundaryMneTzxReZvEQf6AL 1531794
+2024-03-03 17:42:10.120 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:42:10.269 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.ProductController.UploadImage (LearnAPI)'
+2024-03-03 17:42:10.340 +05:30 [INF] Route matched with {action = "UploadImage", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadImage(Microsoft.AspNetCore.Http.IFormFile, System.String) on controller LearnAPI.Controllers.ProductController (LearnAPI).
+2024-03-03 17:42:10.592 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Helper.APIResponse'.
+2024-03-03 17:42:10.613 +05:30 [INF] Executed action LearnAPI.Controllers.ProductController.UploadImage (LearnAPI) in 266.874ms
+2024-03-03 17:42:10.615 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.ProductController.UploadImage (LearnAPI)'
+2024-03-03 17:42:10.622 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7169/api/Product/UploadImage?productcode=001 multipart/form-data;+boundary=----WebKitFormBoundaryMneTzxReZvEQf6AL 1531794 - 200 - application/json;+charset=utf-8 514.2483ms
+2024-03-03 17:43:12.585 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 17:43:13.053 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 17:43:13.059 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 17:43:13.064 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 17:43:13.067 +05:30 [INF] Hosting environment: Development
+2024-03-03 17:43:13.069 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 17:43:13.971 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 17:43:14.479 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 510.1049ms
+2024-03-03 17:43:14.511 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 17:43:14.526 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 17:43:14.533 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 21.9848ms
+2024-03-03 17:43:14.627 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 101.0047ms
+2024-03-03 17:43:14.714 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 17:43:15.081 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 367.4703ms
+2024-03-03 17:43:44.737 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7169/api/Product/UploadImage?productcode=002 multipart/form-data;+boundary=----WebKitFormBoundaryG26QksTKyGyrfXcK 2184245
+2024-03-03 17:43:44.758 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:43:44.948 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.ProductController.UploadImage (LearnAPI)'
+2024-03-03 17:43:45.030 +05:30 [INF] Route matched with {action = "UploadImage", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadImage(Microsoft.AspNetCore.Http.IFormFile, System.String) on controller LearnAPI.Controllers.ProductController (LearnAPI).
+2024-03-03 17:43:45.362 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Helper.APIResponse'.
+2024-03-03 17:43:45.381 +05:30 [INF] Executed action LearnAPI.Controllers.ProductController.UploadImage (LearnAPI) in 346.0164ms
+2024-03-03 17:43:45.384 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.ProductController.UploadImage (LearnAPI)'
+2024-03-03 17:43:45.390 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7169/api/Product/UploadImage?productcode=002 multipart/form-data;+boundary=----WebKitFormBoundaryG26QksTKyGyrfXcK 2184245 - 200 - application/json;+charset=utf-8 653.8182ms
+2024-03-03 17:54:18.954 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 17:54:19.200 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 17:54:19.201 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 17:54:19.205 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 17:54:19.208 +05:30 [INF] Hosting environment: Development
+2024-03-03 17:54:19.209 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 17:54:20.084 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 17:54:20.422 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 330.7480ms
+2024-03-03 17:54:20.513 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 17:54:20.514 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 17:54:20.546 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 32.9797ms
+2024-03-03 17:54:20.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.9630ms
+2024-03-03 17:54:20.666 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 17:54:20.933 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 266.6360ms
+2024-03-03 17:55:45.121 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7169/api/Product/MultiUploadImage?productcode=001 multipart/form-data;+boundary=----WebKitFormBoundarypUv0ryb5BCSGmLiB 836027
+2024-03-03 17:55:45.145 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:55:45.334 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.ProductController.MultiUploadImage (LearnAPI)'
+2024-03-03 17:55:45.422 +05:30 [INF] Route matched with {action = "MultiUploadImage", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MultiUploadImage(Microsoft.AspNetCore.Http.IFormFileCollection, System.String) on controller LearnAPI.Controllers.ProductController (LearnAPI).
+2024-03-03 17:55:45.621 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Helper.APIResponse'.
+2024-03-03 17:55:45.663 +05:30 [INF] Executed action LearnAPI.Controllers.ProductController.MultiUploadImage (LearnAPI) in 230.3131ms
+2024-03-03 17:55:45.667 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.ProductController.MultiUploadImage (LearnAPI)'
+2024-03-03 17:55:45.671 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7169/api/Product/MultiUploadImage?productcode=001 multipart/form-data;+boundary=----WebKitFormBoundarypUv0ryb5BCSGmLiB 836027 - 200 - application/json;+charset=utf-8 550.0955ms
+2024-03-03 18:11:19.540 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 18:11:19.985 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 18:11:19.988 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 18:11:19.993 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 18:11:19.996 +05:30 [INF] Hosting environment: Development
+2024-03-03 18:11:19.998 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 18:11:20.790 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 18:11:21.260 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 470.5688ms
+2024-03-03 18:11:21.319 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 18:11:21.322 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 18:11:21.368 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 48.3016ms
+2024-03-03 18:11:21.436 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 114.4125ms
+2024-03-03 18:11:21.540 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 18:11:21.829 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 288.8747ms
+2024-03-03 18:11:49.555 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Product/GetImage?productcode=001 - -
+2024-03-03 18:11:49.735 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.ProductController.GetImage (LearnAPI)'
+2024-03-03 18:11:49.788 +05:30 [INF] Route matched with {action = "GetImage", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller LearnAPI.Controllers.ProductController (LearnAPI).
+2024-03-03 18:11:49.863 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-03-03 18:11:49.870 +05:30 [INF] Executed action LearnAPI.Controllers.ProductController.GetImage (LearnAPI) in 77.2832ms
+2024-03-03 18:11:49.871 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.ProductController.GetImage (LearnAPI)'
+2024-03-03 18:11:49.872 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Product/GetImage?productcode=001 - - - 200 - text/plain;+charset=utf-8 317.3192ms
+2024-03-03 18:12:48.179 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/Upload/product/001/001.png - -
+2024-03-03 18:12:48.215 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/Upload/product/001/001.png - - - 404 0 - 35.9689ms
+2024-03-03 18:14:11.187 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 18:14:11.438 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 18:14:11.442 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 18:14:11.446 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 18:14:11.449 +05:30 [INF] Hosting environment: Development
+2024-03-03 18:14:11.453 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 18:14:12.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 18:14:13.063 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 855.9364ms
+2024-03-03 18:14:13.132 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 18:14:13.148 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 18:14:13.169 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 36.6785ms
+2024-03-03 18:14:13.254 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.2994ms
+2024-03-03 18:14:13.321 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 18:14:13.620 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.0297ms
+2024-03-03 18:14:24.623 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Product/GetImage?productcode=001 - -
+2024-03-03 18:14:24.786 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.ProductController.GetImage (LearnAPI)'
+2024-03-03 18:14:24.840 +05:30 [INF] Route matched with {action = "GetImage", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller LearnAPI.Controllers.ProductController (LearnAPI).
+2024-03-03 18:14:24.893 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-03-03 18:14:24.901 +05:30 [INF] Executed action LearnAPI.Controllers.ProductController.GetImage (LearnAPI) in 54.7791ms
+2024-03-03 18:14:24.902 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.ProductController.GetImage (LearnAPI)'
+2024-03-03 18:14:24.903 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Product/GetImage?productcode=001 - - - 200 - text/plain;+charset=utf-8 280.1580ms
+2024-03-03 18:14:33.700 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/Upload/product/001/001.png - -
+2024-03-03 18:14:34.343 +05:30 [INF] Sending file. Request path: '/Upload/product/001/001.png'. Physical path: 'C:\Users\harsh\source\repos\LearnAPI\wwwroot\Upload\product\001\001.png'
+2024-03-03 18:14:34.405 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/Upload/product/001/001.png - - - 200 1531608 image/png 704.5611ms
+2024-03-03 18:14:34.635 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/favicon.ico - -
+2024-03-03 18:14:34.640 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/favicon.ico - - - 404 0 - 4.2035ms
+2024-03-03 18:14:52.410 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Product/GetImage?productcode=002 - -
+2024-03-03 18:14:52.417 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.ProductController.GetImage (LearnAPI)'
+2024-03-03 18:14:52.418 +05:30 [INF] Route matched with {action = "GetImage", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetImage(System.String) on controller LearnAPI.Controllers.ProductController (LearnAPI).
+2024-03-03 18:14:52.420 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-03-03 18:14:52.421 +05:30 [INF] Executed action LearnAPI.Controllers.ProductController.GetImage (LearnAPI) in 2.9077ms
+2024-03-03 18:14:52.421 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.ProductController.GetImage (LearnAPI)'
+2024-03-03 18:14:52.421 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Product/GetImage?productcode=002 - - - 200 - text/plain;+charset=utf-8 11.4158ms
+2024-03-03 18:14:59.713 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/Upload/product/002/002.png - -
+2024-03-03 18:15:00.262 +05:30 [INF] Sending file. Request path: '/Upload/product/002/002.png'. Physical path: 'C:\Users\harsh\source\repos\LearnAPI\wwwroot\Upload\product\002\002.png'
+2024-03-03 18:15:00.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/Upload/product/002/002.png - - - 200 2184046 image/png 583.4243ms
