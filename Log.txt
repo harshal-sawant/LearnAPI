@@ -442,3 +442,368 @@ VALUES (@p0, @p1, @p2);
 2024-02-29 20:52:55.878 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 2513.2827ms
 2024-02-29 20:52:55.879 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
 2024-02-29 20:52:55.890 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 2710.2231ms
+2024-03-03 17:18:08.182 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 17:18:08.570 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 17:18:08.575 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 17:18:08.583 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 17:18:08.587 +05:30 [INF] Hosting environment: Development
+2024-03-03 17:18:08.589 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 17:18:09.831 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 17:18:10.273 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 443.0042ms
+2024-03-03 17:18:10.305 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 17:18:10.316 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 17:18:10.345 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 39.9248ms
+2024-03-03 17:18:10.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 114.3263ms
+2024-03-03 17:18:10.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 17:18:10.861 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 369.2816ms
+2024-03-03 17:19:17.098 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47
+2024-03-03 17:19:17.114 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:19:18.211 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:19:18.245 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:19:19.744 +05:30 [INF] Executed DbCommand (132ms) [Parameters=[@__userCred_Username_0='?' (Size = 50) (DbType = AnsiString), @__userCred_Password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_Username_0 AND [t].[password] = @__userCred_Password_1
+2024-03-03 17:19:19.998 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-03-03 17:19:20.123 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-03-03 17:19:20.145 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-03-03 17:19:20.156 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 1907.7911ms
+2024-03-03 17:19:20.157 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:19:20.166 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 3068.9231ms
+2024-03-03 17:19:38.617 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282
+2024-03-03 17:19:38.620 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:19:38.621 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:19:38.628 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:19:38.747 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:19:38.811 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString), @__8__locals1_token_RefreshToken_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0 AND [t].[refreshtoken] = @__8__locals1_token_RefreshToken_1
+2024-03-03 17:19:38.818 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-03-03 17:19:38.827 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-03-03 17:19:38.828 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-03-03 17:19:38.829 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 200.1166ms
+2024-03-03 17:19:38.829 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:19:38.829 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282 - 200 - application/json;+charset=utf-8 212.3489ms
+2024-03-03 17:20:00.658 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282
+2024-03-03 17:20:00.659 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:20:00.661 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:20:00.661 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:20:00.739 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:20:00.741 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-03-03 17:20:00.748 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 86.97ms
+2024-03-03 17:20:00.749 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:20:00.749 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282 - 401 - application/problem+json;+charset=utf-8 90.6848ms
+2024-03-03 17:21:49.389 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47
+2024-03-03 17:21:49.390 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:21:49.390 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:21:49.390 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:21:49.398 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userCred_Username_0='?' (Size = 50) (DbType = AnsiString), @__userCred_Password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_Username_0 AND [t].[password] = @__userCred_Password_1
+2024-03-03 17:21:49.413 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-03-03 17:21:49.423 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-03-03 17:21:49.423 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-03-03 17:21:49.423 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 33.1181ms
+2024-03-03 17:21:49.423 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:21:49.423 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 34.0599ms
+2024-03-03 17:21:59.258 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282
+2024-03-03 17:21:59.258 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:21:59.258 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:21:59.258 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:21:59.265 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:21:59.276 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString), @__8__locals1_token_RefreshToken_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0 AND [t].[refreshtoken] = @__8__locals1_token_RefreshToken_1
+2024-03-03 17:21:59.336 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'LearnAPI.Repos.LearndataContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-03-03 17:21:59.544 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 285.6864ms
+2024-03-03 17:21:59.544 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:21:59.584 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.)
+ ---> System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at LearnAPI.Container.RefreshHandler.GenerateToken(String username) in C:\Users\harsh\source\repos\LearnAPI\Container\RefreshHandler.cs:line 22
+   at LearnAPI.Controllers.AuthorizeController.GenerateToken(TokenResponse token) in C:\Users\harsh\source\repos\LearnAPI\Controllers\AuthorizeController.cs:line 92
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-03-03 17:21:59.600 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282 - 500 - text/plain;+charset=utf-8 342.6051ms
+2024-03-03 17:22:31.049 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282
+2024-03-03 17:22:31.049 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:22:31.050 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:22:31.050 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:22:31.060 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:22:31.068 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString), @__8__locals1_token_RefreshToken_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0 AND [t].[refreshtoken] = @__8__locals1_token_RefreshToken_1
+2024-03-03 17:22:31.068 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'LearnAPI.Repos.LearndataContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-03-03 17:22:31.142 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 91.3399ms
+2024-03-03 17:22:31.142 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:22:31.150 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.)
+ ---> System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at LearnAPI.Container.RefreshHandler.GenerateToken(String username) in C:\Users\harsh\source\repos\LearnAPI\Container\RefreshHandler.cs:line 22
+   at LearnAPI.Controllers.AuthorizeController.GenerateToken(TokenResponse token) in C:\Users\harsh\source\repos\LearnAPI\Controllers\AuthorizeController.cs:line 92
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-03-03 17:22:31.152 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282 - 500 - text/plain;+charset=utf-8 103.2750ms
+2024-03-03 17:22:34.874 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47
+2024-03-03 17:22:34.874 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:22:34.875 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:22:34.875 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:22:34.883 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userCred_Username_0='?' (Size = 50) (DbType = AnsiString), @__userCred_Password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_Username_0 AND [t].[password] = @__userCred_Password_1
+2024-03-03 17:22:34.890 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-03-03 17:22:34.897 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-03-03 17:22:34.897 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-03-03 17:22:34.897 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 22.2ms
+2024-03-03 17:22:34.897 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:22:34.898 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 23.9558ms
+2024-03-03 17:22:50.001 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282
+2024-03-03 17:22:50.001 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:22:50.002 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:22:50.002 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:22:50.009 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:22:50.020 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString), @__8__locals1_token_RefreshToken_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0 AND [t].[refreshtoken] = @__8__locals1_token_RefreshToken_1
+2024-03-03 17:22:50.020 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'LearnAPI.Repos.LearndataContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-03-03 17:22:50.091 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 88.8943ms
+2024-03-03 17:22:50.091 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:22:50.105 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.)
+ ---> System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at LearnAPI.Container.RefreshHandler.GenerateToken(String username) in C:\Users\harsh\source\repos\LearnAPI\Container\RefreshHandler.cs:line 22
+   at LearnAPI.Controllers.AuthorizeController.GenerateToken(TokenResponse token) in C:\Users\harsh\source\repos\LearnAPI\Controllers\AuthorizeController.cs:line 92
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-03-03 17:22:50.108 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282 - 500 - text/plain;+charset=utf-8 107.5709ms
+2024-03-03 17:23:59.662 +05:30 [INF] User profile is available. Using 'C:\Users\harsh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 17:23:59.929 +05:30 [INF] Now listening on: https://localhost:7169
+2024-03-03 17:23:59.931 +05:30 [INF] Now listening on: http://localhost:5251
+2024-03-03 17:23:59.935 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 17:23:59.937 +05:30 [INF] Hosting environment: Development
+2024-03-03 17:23:59.939 +05:30 [INF] Content root path: C:\Users\harsh\source\repos\LearnAPI
+2024-03-03 17:24:00.885 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 17:24:01.225 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 340.1423ms
+2024-03-03 17:24:01.250 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 17:24:01.250 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 17:24:01.257 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 11986 application/javascript;+charset=utf-8 6.2789ms
+2024-03-03 17:24:01.341 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 91.0671ms
+2024-03-03 17:24:01.388 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-03-03 17:24:01.591 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 202.5659ms
+2024-03-03 17:24:21.488 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47
+2024-03-03 17:24:21.496 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:24:21.620 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:24:21.690 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:24:25.098 +05:30 [INF] Executed DbCommand (129ms) [Parameters=[@__userCred_Username_0='?' (Size = 50) (DbType = AnsiString), @__userCred_Password_1='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_Username_0 AND [t].[password] = @__userCred_Password_1
+2024-03-03 17:24:25.658 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-03-03 17:24:25.907 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-03-03 17:24:25.967 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-03-03 17:24:25.994 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 4292.3815ms
+2024-03-03 17:24:25.997 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:24:26.012 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 4523.9558ms
+2024-03-03 17:24:39.968 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282
+2024-03-03 17:24:39.972 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:24:39.974 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:24:39.983 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:24:40.024 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:24:40.130 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString), @__8__locals1_token_RefreshToken_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0 AND [t].[refreshtoken] = @__8__locals1_token_RefreshToken_1
+2024-03-03 17:24:40.147 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-03-03 17:24:40.157 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-03-03 17:24:40.161 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-03-03 17:24:40.162 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 178.9111ms
+2024-03-03 17:24:40.162 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:24:40.162 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282 - 200 - application/json;+charset=utf-8 194.5956ms
+2024-03-03 17:24:54.002 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282
+2024-03-03 17:24:54.004 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:24:54.008 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:24:54.008 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:24:54.122 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:24:54.124 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-03-03 17:24:54.128 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 120.0449ms
+2024-03-03 17:24:54.128 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:24:54.129 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 282 - 401 - application/problem+json;+charset=utf-8 126.5637ms
+2024-03-03 17:25:00.974 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 419
+2024-03-03 17:25:00.975 +05:30 [INF] CORS policy execution successful.
+2024-03-03 17:25:00.975 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:25:00.975 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.TokenResponse) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-03-03 17:25:00.990 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__token_RefreshToken_0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[refreshtoken] = @__token_RefreshToken_0
+2024-03-03 17:25:00.996 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString), @__8__locals1_token_RefreshToken_1='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0 AND [t].[refreshtoken] = @__8__locals1_token_RefreshToken_1
+2024-03-03 17:25:01.005 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-03-03 17:25:01.012 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-03-03 17:25:01.012 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-03-03 17:25:01.013 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 37.2392ms
+2024-03-03 17:25:01.014 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-03-03 17:25:01.014 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Authorize/GenerateRefreshToken application/json 419 - 200 - application/json;+charset=utf-8 40.2914ms
